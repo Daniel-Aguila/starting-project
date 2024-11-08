@@ -1,5 +1,5 @@
-import {CATEGORIES} from '../data/dummy-data';
-import { FlatList } from 'react-native-web';
+import {CATEGORIES} from '../data/dummy-data.js';
+import { FlatList } from 'react-native';
 import CategoryGridTitle from '../components/CategoryGridTitle';
 
 function renderCategoryItem(itemData){
@@ -7,11 +7,14 @@ function renderCategoryItem(itemData){
 }
 
 function CategoriesScreen(){
-    return 
-    (
-    <FlatList data={CATEGORIES} 
+    //doing numColumns allows us to display our list
+    //as two columns which create a grid system
+    return (
+    <FlatList  
+    data={CATEGORIES} 
     keyExtractor={(item) => item.id} 
     renderItem={renderCategoryItem}
+    numColumns={2}
     />
     );
 }

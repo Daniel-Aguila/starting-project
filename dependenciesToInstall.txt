@@ -1,0 +1,5 @@
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack
+
+if dependencies dont wory try to go to a lower version like the ^6.x from react navigation
